@@ -11,6 +11,7 @@ export default class TypeWriterCore {
   timer: NodeJS.Timeout | number | undefined; // 用于控制下一次消费的定时器，兼容浏览器和Node.js环境
 
   constructor({onConsume, maxStepSeconds}: TypeWriterCoreOptions) {
+
     this.onConsume = onConsume; // 初始化消费字符的回调
 
     if (maxStepSeconds !== undefined) {
